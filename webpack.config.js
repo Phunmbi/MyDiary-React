@@ -9,27 +9,33 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss|sass)$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader'
           },
           {
-            loader: "css-loader",
-            options: {
-              modules: true,
-            }
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
           }
-        ]
+        ],
+        enforce: 'pre'
       }
     ]
   },
-  plugins: [htmlWebpackPlugin]
+  plugins: [htmlWebpackPlugin],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
+  }
 };

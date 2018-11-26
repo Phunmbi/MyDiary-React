@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import '../styles/styles.scss';
 import LandingPage from '../views/LandingPage';
 import Auth from '../views/Auth';
 
