@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
+import Root from './root';
 
 
 ReactDOM.render(
-  <App />,
+  <Root>
+    <App />
+  </Root>,
   document.getElementById('index')
 );
