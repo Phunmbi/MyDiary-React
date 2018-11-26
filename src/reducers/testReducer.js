@@ -4,7 +4,7 @@ import initialState from './initialState';
 export default (state= initialState, action) => {
   switch (action.type) {
     case types.GET_TEST:
-      return { ...state, test: action.response };
+      return { ...state, test: action.payload };
     default:
       return state;
   }

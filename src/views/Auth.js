@@ -2,9 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { testAction } from '../actions/testAction';
 
-class Auth extends Component {
-  handleClick() {
-    console.log(props);
+export class Auth extends Component {
+  handleClick = () => {
+    const { testAction } = this.props;
+    testAction();
+  }
+
+  componentDidUpdate = () => {
+    const { response } = this.props;
+    console.log(response)
+
+    const result = document.getElementById('result');
+    result.innerText = response.middleName;
   }
 
   render() {
@@ -12,14 +21,14 @@ class Auth extends Component {
       <div className="hero">
         <h2>Sign up</h2>
         <p onClick={this.handleClick} className="click">Click me</p>
-        <div></div>
+        <div id="result"></div>
       </div>
     );
   }
 };
 
-const MapPropsToState = (state) => {
-  response: state
+function mapStatetoProps(state) {
+  return { response: state.testReducer.test };
 }
 
-export default connect(MapPropsToState, { testAction })(Auth);
+export default connect(mapStatetoProps, { testAction })(Auth);
