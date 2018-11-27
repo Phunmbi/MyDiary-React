@@ -17,15 +17,28 @@ class Signup extends Component {
     }
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Run validation
+    const { firstName, lastName, email, password, confirmPassword, errors } = this.state;
+    const fieldNames = ['firstname', 'lastname', 'email', 'password', 'confirmPassword'];
+    const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, event.target.id, event.target.value, fieldNames);
+
+
+  }
+
   handleChange = (event) => {
     this.setState({ [event.target.id]: event.target.value });
-    const status = validateAuth(this.state, event.target.id, event.target.value);
+    const { firstName, lastName, email, password, confirmPassword, errors } = this.state;
+    const fieldNames = ['firstname', 'lastname', 'email', 'password', 'confirmPassword'];
+    const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, event.target.id, event.target.value, fieldNames);
 
     if (status.status) {
-      this.setState({ errors: status });
-    } else {
-      this.setState({ errors: status });
-    }
+      this.setState({ errors: { ...status }});
+    } else (
+      this.setState({ errors: { ...status }})
+    );
   }
 
   render() {
@@ -34,11 +47,11 @@ class Signup extends Component {
       <div className="hero-account">
         <h3>Create your MyDiary Account</h3>
             <p id="errorResponse"></p>
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} id="firstName" type="text" placeholder="First Name" required />
-                <span className='errorResponse'>{errors.firstName}</span>
+                <span className='errorResponse'>{errors.firstname}</span>
                 <input onChange={this.handleChange} id="lastName" type="text" placeholder="Last Name" required />
-                <span className='errorResponse'>{errors.lastName}</span>
+                <span className='errorResponse'>{errors.lastname}</span>
                 <input onChange={this.handleChange} id="email" type="email" placeholder="Email" required />
                 <span className='errorResponse'>{errors.email}</span>
                 <input onChange={this.handleChange} id="password" type="password" placeholder="Password" required min='8' />

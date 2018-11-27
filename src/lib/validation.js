@@ -1,26 +1,27 @@
-const validateAuth = (fields, fieldName,  fieldValue) => {
+const validateAuth = (fields, fieldName,  fieldValue, fieldNames) => {
   const error = { status: false };
 
-  console.log(fields);
-  if (!fieldValue || fieldValue.trim() === '') {
-    switch (fieldName) {
-      case 'firstName':
-        error[fieldName] = 'Please enter your first name.';
-        error.status = true;
-        break;
-      case 'lastName':
-        error[fieldName] = 'Please enter your last name.';
-        error.status = true;
-        break;
-      case 'confirmPassword':
-        error[fieldName] = 'Please confirm your password.';
-        error.status = true;
-        break;
-      default:
-        error[fieldName] = `Please enter a valid ${field}.`;
-        error.status = true;
+  fieldNames.forEach((field) => {
+    if (!fieldValue || fieldValue.trim() === '') {
+      switch (field) {
+        case 'firstname':
+          error[field] = 'Please enter your first name.';
+          error.status = true;
+          break;
+        case 'lastname':
+          error[field] = 'Please enter your last name.';
+          error.status = true;
+          break;
+        case 'confirmPassword':
+          error[field] = 'Please confirm your password.';
+          error.status = true;
+          break;
+        default:
+          error[field] = `Please enter a valid ${field}.`;
+          error.status = true;
+      }
     }
-  }
+  });
 
 
   // checks for valid email
