@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import LandingPageComponent from '../components/LandingPage';
+import LandingPageLayout from '../components/layouts/LandingPage';
 
 const LandingPage = () => {
   return(
     <div>
-      <LandingPageComponent />
+      <LandingPageLayout />
     </div>
   );
 };
