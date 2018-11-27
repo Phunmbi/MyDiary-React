@@ -31,7 +31,6 @@ p{
 
 section{
   padding: 15px;
-  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -80,7 +79,7 @@ input[type=submit]{
   }
 }
 
-#errorResponse{
+.errorResponse{
   color: red;
 }
 
