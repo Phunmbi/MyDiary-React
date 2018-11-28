@@ -3,6 +3,8 @@ const initialState = {
   firstName: '',
   lastName: '',
   status: '',
+  entries: [],
+  entriesError: [],
   error: []
 };
 
