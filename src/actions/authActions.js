@@ -28,3 +28,23 @@ export const signup = (formValues) => async (dispatch) => {
     });
   }
 };
+
+export const signin = (formValues) => async (dispatch) => {
+  try {
+    const response = await axios.post(`${BASEURL}/auth/login`, formValues);
+    // Store important details in local storage
+    const { tokenize, data } = response.data;
+    persistAuth(tokenize, data);
+
+    // Then dispatch response
+    dispatch({
+      type: types.SIGNUP,
+      payload: response.data
+    });
+  } catch (error) {
+    dispatch({
+      type: types.SIGNUP_ERROR,
+      payload: error.response
+    });
+  }
+};
