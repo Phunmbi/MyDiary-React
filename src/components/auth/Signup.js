@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { signup } from '../../actions/authActions';
 import validateAuth from '../../lib/validation';
@@ -94,7 +95,8 @@ class Signup extends Component {
     const fieldNames = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
     const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, fieldNames);
 
-    return <div className="hero-account">
+    return(
+      <div className="hero-account">
         <h3>Create your MyDiary Account</h3>
         <p className="errorResponse" id="errorResponse" />
         <form onSubmit={this.handleSubmit}>
@@ -124,9 +126,10 @@ class Signup extends Component {
         </form>
         <p>
           Already have an account? then
-          <a href="index.html"> Sign in</a>
+          <Link to="/auth/signin"> Sign in</Link>
         </p>
-      </div>;
+      </div>
+    )
   }
 }
 
