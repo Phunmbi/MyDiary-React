@@ -1,5 +1,8 @@
 const initialState = {
-  authenticated: [],
+  authenticated: '',
+  firstName: '',
+  lastName: '',
+  status: '',
   error: []
 };
 

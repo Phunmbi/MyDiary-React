@@ -19,7 +19,7 @@ const LandingPage = (props) => {
           <p>With the ability to edit and delete entries as you please.</p>
           <p>All wrapped in a lightweight app built for your convenience.</p>
         </div>
-          <Signup />
+          <Signup {...props} />
       </section>
     </div>
   );

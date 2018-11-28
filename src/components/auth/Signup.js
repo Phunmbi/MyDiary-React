@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import swal from 'sweetalert';
 import { signup } from '../../actions/authActions';
 import validateAuth from '../../lib/validation';
 import spinner from '../../assets/Spinner-1s.gif';
@@ -23,18 +24,19 @@ class Signup extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { signup: signupUser, response } = this.props;
+    const { signup: signupUser } = this.props;
 
-    console.log(this.props)
     // Run validation
     const { firstName, lastName, email, password, confirmPassword, errors } = this.state;
     const fieldNames = ['firstname', 'lastname', 'email', 'password', 'confirmPassword'];
     const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, event.target.id, event.target.value, fieldNames);
 
+    // Store validation errors
     this.setState({
       errors: { ...errors, status }
     });
 
+    // Process form fields
     const body = {
       firstName: firstName.trim(),
       lastName: lastName.trim(),
@@ -56,17 +58,35 @@ class Signup extends Component {
       event.target.children.confirmPassword.value = '';
 
       // Send request
-      await signupUser(body, console.log(response));
+      await signupUser(body);
     }
-  }
-
-  componentDidUpdate = () => {
-    const { response } = this.props;
-    console.log(response);
   }
 
   handleChange = (event) => {
     this.setState({ [event.target.id]: event.target.value });
+  }
+
+  componentDidUpdate = () => {
+    const { response, history } = this.props;
+    if (response.auth.error) {
+      const serverError = document.getElementById('errorResponse');
+      const submit = document.getElementById('submit');
+
+      // Return and display error
+      serverError.innerHTML = response.auth.error.data.Error;
+
+      // Reset styles
+      submit.innerHTML = 'Create Account';
+      submit.style.background = '#FEEF6D';
+    }
+    if (response.auth.status === 201) {
+      swal('Account Created!', 'Your account was succesfully created!', 'success');
+      // Reset styles
+      submit.innerHTML = 'Create Account';
+      submit.style.background = '#FEEF6D';
+
+       history.push('/dashboard');
+    }
   }
 
   render() {
@@ -74,27 +94,39 @@ class Signup extends Component {
     const fieldNames = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
     const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, fieldNames);
 
-    return (
-      <div className="hero-account">
+    return <div className="hero-account">
         <h3>Create your MyDiary Account</h3>
-          <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} id="firstName" type="text" placeholder="First Name" required />
-            <span className='errorResponse'>{status.firstname || errors.firstname}</span>
-            <input onChange={this.handleChange} id="lastName" type="text" placeholder="Last Name" required />
-            <span className='errorResponse'>{status.lastname || errors.lastname}</span>
-            <input onChange={this.handleChange} id="email" type="email" placeholder="Email" required />
-            <span className='errorResponse'>{status.email || errors.email}</span>
-            <input onChange={this.handleChange} id="password" type="password" placeholder="Password" required min='8' />
-            <span className='errorResponse'>{status.password || errors.password}</span>
-            <input onChange={this.handleChange} id="confirmPassword" type="password" placeholder="Confirm Password" required min='8' />
-            <span className='errorResponse'>{status.confirmPassword || errors.confirmPassword}</span>
-            <button id="submit" type="submit">Create Account</button>
-          </form>
-          <p>Already have an account? then
-            <a href="index.html"> Sign in</a>
-          </p>
-      </div>
-    );
+        <p className="errorResponse" id="errorResponse" />
+        <form onSubmit={this.handleSubmit}>
+          <input onChange={this.handleChange} id="firstName" type="text" placeholder="First Name" required />
+          <span className="errorResponse">
+            {status.firstname || errors.firstname}
+          </span>
+          <input onChange={this.handleChange} id="lastName" type="text" placeholder="Last Name" required />
+          <span className="errorResponse">
+            {status.lastname || errors.lastname}
+          </span>
+          <input onChange={this.handleChange} id="email" type="email" placeholder="Email" required />
+          <span className="errorResponse">
+            {status.email || errors.email}
+          </span>
+          <input onChange={this.handleChange} id="password" type="password" placeholder="Password" required min="8" />
+          <span className="errorResponse">
+            {status.password || errors.password}
+          </span>
+          <input onChange={this.handleChange} id="confirmPassword" type="password" placeholder="Confirm Password" required min="8" />
+          <span className="errorResponse">
+            {status.confirmPassword || errors.confirmPassword}
+          </span>
+          <button id="submit" type="submit">
+            Create Account
+          </button>
+        </form>
+        <p>
+          Already have an account? then
+          <a href="index.html"> Sign in</a>
+        </p>
+      </div>;
   }
 }
 

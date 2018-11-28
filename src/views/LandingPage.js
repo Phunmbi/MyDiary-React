@@ -4,7 +4,7 @@ import LandingPageLayout from '../components/layouts/LandingPage';
 const LandingPage = (props) => {
   return(
     <div>
-      <LandingPageLayout />
+      <LandingPageLayout {...props} />
     </div>
   );
 };
