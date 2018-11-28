@@ -1,5 +1,6 @@
 const initialState = {
-  test: []
+  authenticated: [],
+  error: []
 };
 
 export default initialState;

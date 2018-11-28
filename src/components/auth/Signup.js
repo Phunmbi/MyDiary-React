@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { signup } from '../../actions/authActions';
 import validateAuth from '../../lib/validation';
-import Loading from '../shared/Loading';
 import spinner from '../../assets/Spinner-1s.gif';
 
 class Signup extends Component {
@@ -20,9 +21,11 @@ class Signup extends Component {
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
+    const { signup: signupUser, response } = this.props;
 
+    console.log(this.props)
     // Run validation
     const { firstName, lastName, email, password, confirmPassword, errors } = this.state;
     const fieldNames = ['firstname', 'lastname', 'email', 'password', 'confirmPassword'];
@@ -53,8 +56,13 @@ class Signup extends Component {
       event.target.children.confirmPassword.value = '';
 
       // Send request
-      console.log(body);
+      await signupUser(body, console.log(response));
     }
+  }
+
+  componentDidUpdate = () => {
+    const { response } = this.props;
+    console.log(response);
   }
 
   handleChange = (event) => {
@@ -90,4 +98,8 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+const mapStatetoProps = (state) => {
+  return { response: state };
+}
+
+export default connect(mapStatetoProps, { signup })(Signup);
