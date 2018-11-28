@@ -1,12 +1,10 @@
 import React from 'react';
+import LandingPageLayout from '../components/layouts/LandingPage';
 
-import { Link } from 'react-router-dom';
-
-const LandingPage = () => {
+const LandingPage = (props) => {
   return(
-    <div className="hero">
-      <h2>My Diary</h2>
-      <p><Link to='/auth'>sign up</Link></p>
+    <div>
+      <LandingPageLayout {...props} />
     </div>
   );
 };

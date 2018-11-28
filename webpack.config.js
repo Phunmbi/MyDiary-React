@@ -6,6 +6,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  entry: ["babel-polyfill", "./src/index.js"],
   module: {
     rules: [
       {
@@ -29,6 +30,14 @@ module.exports = {
           }
         ],
         enforce: 'pre'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       }
     ]
   },

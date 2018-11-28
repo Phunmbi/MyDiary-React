@@ -7,12 +7,17 @@ import rootReducer from './reducers';
 
 const enhancers = composeWithDevTools({});
 const state = {
+  auth: {
+    authenticated: localStorage.getItem('token'),
+    firstName: localStorage.getItem('firstName'),
+    lastName: localStorage.getItem('lastName')
+  }
 };
 
-export default ({ children, initialState = { ...state } }) => {
+export default ({ children }) => {
   const store = createStore(
     rootReducer,
-    initialState,
+    state,
     enhancers(applyMiddleware(thunk))
   );
 
