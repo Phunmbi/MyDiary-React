@@ -1,14 +1,14 @@
 import React from 'react';
-import Auth from '../../views/Auth';
+import Signup from '../../components/auth/Signup';
 import Root from '../../root';
 
 const wrapper = shallow(
   <Root>
-    <Auth debug />
+    <Signup />
   </Root>
 )
 
-describe('Auth UI', () => {
+describe('Signup UI', () => {
   it('should render correctly in "debug" mode', () => {
     expect(wrapper).toMatchSnapshot();
   });

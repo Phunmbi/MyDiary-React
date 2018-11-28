@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Auth UI should render correctly in "debug" mode 1`] = `
+exports[`Signup UI should render correctly in "debug" mode 1`] = `
 <Provider
   store={
     Object {
@@ -12,8 +12,6 @@ exports[`Auth UI should render correctly in "debug" mode 1`] = `
     }
   }
 >
-  <Connect(Auth)
-    debug={true}
-  />
+  <Connect(Signup) />
 </Provider>
 `;

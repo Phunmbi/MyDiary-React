@@ -17,6 +17,10 @@
     "setupFiles": [
       "./src/setupTests.js"
     ],
+    "moduleNameMapper": {
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-static-stubs/$1",
+        "\\.(css|less|scss|png)$": "identity-obj-proxy"
+    },
     "coverageReporters": [
       "lcov",
       "text",
@@ -51,7 +55,9 @@
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "jest-static-stubs": "0.0.1",
     "node-sass": "^4.10.0",
     "redux-devtools": "^3.4.2",
     "sass-loader": "^7.1.0",
