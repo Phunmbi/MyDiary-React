@@ -1,2 +1,2 @@
-export const SIGNUP = 'SIGN_UP';
-export const SIGNUP_ERROR = 'SIGN_UP_ERROR';
+export const USER_AUTH = 'SIGN_UP';
+export const USER_AUTH_ERROR = 'SIGN_UP_ERROR';

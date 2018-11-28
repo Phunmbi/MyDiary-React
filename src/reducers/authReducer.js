@@ -3,9 +3,9 @@ import initialState from './initialState';
 
 export default (state= initialState, action) => {
   switch (action.type) {
-    case types.SIGNUP:
+    case types.USER_AUTH:
       return { ...state, authenticated: action.payload.token || action.payload.tokenize, firstName: action.payload.data.firstName, lastName: action.payload.data.lastName, status: action.payload.status };
-    case types.SIGNUP_ERROR:
+    case types.USER_AUTH_ERROR:
       return { ...state, error: action.payload };
     default:
       return state;
