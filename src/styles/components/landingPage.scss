@@ -1,14 +1,3 @@
-body{
-  margin: 20px auto;
-  font-size: 17px;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  max-width: 1900px;
-  background-image: url("../assets/bg-image.jpg");
-  background-repeat: no-repeat;
-  background-size: unset;
-  color: white;
-}
-
 h1{
   font-size: 3.1em;
   text-align: center;
@@ -87,7 +76,13 @@ button[type=submit]{
 .hero{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  max-width: 1900px;
+  height: 100vh;
+  background-image: url("../assets/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   .hero-marketing{
     line-height: 1.2;
     font-size: 1.3em;

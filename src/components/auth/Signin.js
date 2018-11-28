@@ -87,7 +87,8 @@ class Signin extends Component {
     const fieldNames = ['email', 'password'];
     const status = validateAuth({ email, password }, fieldNames);
 
-    return <div className="hero">
+    return(
+      <div className="hero">
         <div className="title">
           <h1>MyDiary</h1>
         </div>
@@ -122,7 +123,8 @@ class Signin extends Component {
             </p>
           </div>
         </section>
-      </div>;
+      </div>
+    )
   }
 }
 

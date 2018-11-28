@@ -1,11 +1,16 @@
-/* Base Resets */
+/* Brand Colours */
 
 $yellow:#FEEF6D;
 $navyblue: #142B44;
 
+
+/* Base Resets */
+
 html,body,p,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
+  font-size: 17px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -34,4 +39,5 @@ img{
   max-width: 100%;
 }
 
+/* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Roboto');
