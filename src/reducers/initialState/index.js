@@ -3,9 +3,17 @@ const initialState = {
   firstName: '',
   lastName: '',
   status: '',
+  newEntry: [],
+  newEntryError: [],
+  singleEntry: [],
+  singleEntryError: [],
+  editedEntry: [],
+  editedEntryError: [],
+  deletedEntry: [],
+  deletedEntryError: [],
   entries: [],
   entriesError: [],
-  error: []
+  error: [],
 };
 
 export default initialState;

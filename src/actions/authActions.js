@@ -6,7 +6,7 @@ const persistAuth = (token, data) => {
   localStorage.setItem('token', token);
   localStorage.setItem('firstName', data.firstName);
   localStorage.setItem('lastName', data.lastName);
-}
+};
 
 export const signup = (formValues) => async (dispatch) => {
   try {
@@ -19,12 +19,12 @@ export const signup = (formValues) => async (dispatch) => {
     // Then dispatch response
     dispatch({
       type: types.USER_AUTH,
-      payload: response.data
+      payload: response.data,
     });
   } catch (error) {
     dispatch({
       type: types.USER_AUTH_ERROR,
-      payload: error.response
+      payload: error.response,
     });
   }
 };
@@ -39,12 +39,12 @@ export const signin = (formValues) => async (dispatch) => {
     // Then dispatch response
     dispatch({
       type: types.USER_AUTH,
-      payload: response.data
+      payload: response.data,
     });
   } catch (error) {
     dispatch({
       type: types.USER_AUTH_ERROR,
-      payload: error.response
+      payload: error.response,
     });
   }
 };

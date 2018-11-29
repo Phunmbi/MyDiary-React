@@ -86,7 +86,7 @@ class Signup extends Component {
       submit.innerHTML = 'Create Account';
       submit.style.background = '#FEEF6D';
 
-       history.push('/dashboard');
+      history.push('/dashboard');
     }
   }
 
