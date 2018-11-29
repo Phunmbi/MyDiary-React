@@ -1,4 +1,5 @@
-h1{
+.dashboard{
+  h1{
     font-size: 1.6em;
     font-family: 'Dancing Script', cursive;
     color: #142B44;
@@ -141,7 +142,6 @@ section{
 }
 
 #loadingModal, #responseModal{
-    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -282,4 +282,5 @@ span{
 #errorResponse{
     color: red;
     font-weight: bold;
+}
 }

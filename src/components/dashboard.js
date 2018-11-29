@@ -12,17 +12,30 @@ class Dashboard extends Component {
 
   componentDidMount = () => {
     const { getAllEntries: getEntries  } = this.props;
-    getEntries()
-    console.log(this.props);
+    getEntries();
   }
 
-  // componentDidUpdate = () => {
-  //   console.log(this.props);
-  // }
+  componentWillReceiveProps = (nextProps) => {
+    const { response } = nextProps;
+    const allEntries = response.entries.entries;
+
+    if (allEntries.status === 200 && allEntries.data.length > 0) {
+      this.setState({ entries: allEntries.data });
+    }
+
+    if (allEntries.status === 200 && allEntries.data.length === 0) {
+      this.setState({ entries: 'no entries' });
+    }
+
+    if (allEntries.status !== 200) {
+      this.setState({ error: response.entries.error });
+    }
+  };
 
   render() {
+    const { entries } = this.state
     return (
-      <div>
+      <div className="dashboard">
         <Header />
         <section>
           <h1 id="response"></h1>
@@ -31,13 +44,31 @@ class Dashboard extends Component {
         <section>
           <h3>Dashboard</h3>
         </section>
-        <section id="section">
-        </section>
-        <div id="loadingModal">
-          <div className="loadingModal-main">
-            <img src={Ellipsis} alt="Loading" />
-          </div>
-        </div>
+        {entries.length > 0 ?
+          (
+            <section id="section">
+              {entries === 'no entries' ?
+                (
+                  <div>
+                    <p>Welcome to my Diary. Here's a little guide to help you know your way around.</p>
+                    <p>To add a new entry, just click on the big blue + button in the bottom corner.</p>
+                    <p>And if you'd like us to help remind you to pen something down, click on the icon in the upper right corner. Enjoy.</p>
+                  </div>
+                ) :
+                (
+                  <div>Entries dey o</div>
+                )
+              }
+            </section>
+          ) :
+          (
+            <div id="loadingModal">
+              <div className="loadingModal-main">
+                <img src={Ellipsis} alt="Loading" />
+              </div>
+            </div>
+          )
+        }
         <div id="deleteModal">
           <div className="deleteModal-main">
             <div className="deleteModal-question">
