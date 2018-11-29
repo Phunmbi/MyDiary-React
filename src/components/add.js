@@ -36,7 +36,6 @@ class Add extends Component {
     submit.innerHTML = 'Submit';
     submit.style.background = '#FEEF6D';
 
-    console.log(nextProps);
     if (response.entries.newEntryError.length > 0) {
       swal(
         'Error Creating Entry',

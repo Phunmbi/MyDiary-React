@@ -42,3 +42,22 @@ export const addEntry = (formvalues) => async (dispatch) => {
     });
   }
 };
+
+export const viewEntry = (id) => async (dispatch) => {
+  try {
+    const response = await axios.get(`${BASEURL}/entries/${id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+    dispatch({
+      type: types.VIEW_ENTRY,
+      payload: response.data,
+    });
+  } catch (error) {
+    dispatch({
+      type: types.VIEW_ENTRY_ERROR,
+      payload: error.response,
+    });
+  }
+};

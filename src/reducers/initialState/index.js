@@ -5,9 +5,11 @@ const initialState = {
   status: '',
   newEntry: [],
   newEntryError: [],
+  singleEntry: [],
+  singleEntryError: [],
   entries: [],
   entriesError: [],
-  error: []
+  error: [],
 };
 
 export default initialState;
