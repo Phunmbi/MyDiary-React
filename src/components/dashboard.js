@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Header from './shared/Header';
-import Card from './shared/EntryCard';
+import Card from './shared/entryCard';
 import { getAllEntries } from '../actions/entryActions';
 import Ellipsis from '../assets/Ellipsis.gif';
 
