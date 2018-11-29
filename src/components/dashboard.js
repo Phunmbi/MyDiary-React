@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Header from '../components/shared/Header';
+import Card from '../components/shared/entryCard';
 import { getAllEntries } from '../actions/entryActions';
 import Ellipsis from '../assets/Ellipsis.gif';
 
@@ -40,7 +42,14 @@ class Dashboard extends Component {
         <section>
           <h1 id="response"></h1>
         </section>
-          <h1>Welcome to your Diary {localStorage.getItem('firstName').charAt(0).toUpperCase()}{localStorage.getItem('firstName').slice(1, localStorage.getItem('firstName').length)}</h1>
+            {localStorage.getItem('firstName') ?
+              (
+                <h1>Welcome to your Diary {localStorage.getItem('firstName').charAt(0).toUpperCase() + localStorage.getItem('firstName').slice(1, localStorage.getItem('firstName').length)}</h1>
+              ) :
+              (
+                null
+              )
+            }
         <section>
           <h3>Dashboard</h3>
         </section>
@@ -56,7 +65,7 @@ class Dashboard extends Component {
                   </div>
                 ) :
                 (
-                  <div>Entries dey o</div>
+                  <Card entries={entries} />
                 )
               }
             </section>
@@ -83,7 +92,7 @@ class Dashboard extends Component {
         </div>
 
         <div className="add">
-            <a href="add.html"><span>+</span></a>
+          <Link to="/entries/add"><span>+</span></Link>
         </div>
       </div>
     );
