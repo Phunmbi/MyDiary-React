@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ContactIcon from '../../assets/icons8-contacts-26.png';
 
 const Header = () => {
   return (
     <header>
-      <h1>MyDiary</h1>
-      <a href="profile.html">
+      <Link to="/dashboard">
+        <h1>MyDiary</h1>
+      </Link>
+      <Link to="/profile">
         <img src={ContactIcon} alt="Profile" />
-      </a>
+      </Link>
     </header>
   );
 };

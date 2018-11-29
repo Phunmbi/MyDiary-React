@@ -3,12 +3,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import '../styles/styles.scss';
 import authenticate from '../components/hoc/authenticate';
 import LandingPage from '../views/LandingPage';
-import Dashboard from '../components/Dashboard';
+import Dashboard from '../components/dashboard';
 import Signin from '../components/auth/Signin';
-import Add from '../components/Add';
+import Add from '../components/add';
 import Edit from '../components/Edit';
 import ViewEntry from '../components/ViewEntry';
 import DeleteEntry from '../components/Delete';
+import Profile from '../components/Profile';
 
 const App = () => (
   <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => (
       <Route exact path="/entries/edit/:id" component={authenticate(Edit)} />
       <Route exact path="/entries/view/:id" component={authenticate(ViewEntry)} />
       <Route exact path="/entries/delete/:id" component={authenticate(DeleteEntry)} />
+      <Route exact path="/profile" component={authenticate(Profile)} />
     </div>
   </BrowserRouter>
 );
