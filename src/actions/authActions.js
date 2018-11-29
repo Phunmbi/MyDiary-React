@@ -48,3 +48,8 @@ export const signin = (formValues) => async (dispatch) => {
     });
   }
 };
+
+export const signout = () => (dispatch) => {
+  localStorage.clear();
+  return dispatch({ type: types.USER_SIGNOUT });
+};

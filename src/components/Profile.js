@@ -5,6 +5,7 @@ import swal from 'sweetalert';
 import Header from './shared/Header';
 import { getReminder, addReminder, deleteReminder } from '../actions/profileActions';
 import { getAllEntries } from '../actions/entryActions';
+import { signout } from '../actions/authActions';
 import Home from '../assets/icons8-home-page-24.png';
 import Ellipsis from '../assets/Ellipsis.gif';
 import spinner from '../assets/Spinner-1s.gif';
@@ -25,8 +26,6 @@ class Profile extends Component {
     const { response, entries, history } = nextProps;
     const deleteButton = document.getElementById('delete');
     const reminder = document.getElementById('reminder');
-
-    console.log(response);
 
     if (entries.status === 200) {
       this.setState({
@@ -119,6 +118,18 @@ class Profile extends Component {
     }
   }
 
+  signout = () => {
+    const { signout: signoutUser } = this.props;
+
+    signoutUser();
+
+    swal(
+      'You have been signed out',
+      'You have successfully signed out of your application',
+      'success',
+    );
+  };
+
   render() {
     const { existingReminder, articleCount } = this.state;
     return (
@@ -156,7 +167,7 @@ class Profile extends Component {
             <h4>Total Number of Entries</h4>
             <p id="entries">{`You have a total of ${articleCount} entries`}</p>
           </div>
-          <button type="button" id="signOut">Sign Out</button>
+          <button onClick={this.signout} type="button" id="signOut">Sign Out</button>
         </section>
       </div>
     );
@@ -175,4 +186,5 @@ export default connect(mapStateToProps, {
   addReminder,
   deleteReminder,
   getAllEntries,
+  signout,
 })(Profile);

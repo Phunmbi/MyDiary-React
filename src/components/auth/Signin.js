@@ -47,7 +47,6 @@ class Signin extends Component {
       event.target.children.submit.style.background = `#FEEF6D url(${spinner}) no-repeat center`;
 
       // Clear input fields
-      event.target.children.email.value = '';
       event.target.children.password.value = '';
 
       // Send request
