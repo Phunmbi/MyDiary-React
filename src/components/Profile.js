@@ -45,6 +45,7 @@ class Profile extends Component {
           reminder.innerText = 'You currently have no reminder set up, Would you like one?';
           break;
         default:
+          deleteButton.disabled = false;
           reminder.innerText = `Your current reminder setting is for ${response.existingReminder.data.reminder} daily`;
           break;
       }
@@ -94,7 +95,7 @@ class Profile extends Component {
     event.preventDefault();
 
     // gather and process inputs
-    const { addReminder: addNewReminder } = this.props;
+    const { addReminder: addNewReminder, history } = this.props;
     const time = event.target.previousSibling.value;
     const set = event.target;
 
@@ -104,7 +105,18 @@ class Profile extends Component {
     const body = {
       time,
     };
-    addNewReminder(body);
+
+    if (body.time.length === 5) {
+      addNewReminder(body);
+    } else {
+      swal(
+        'Please enter a valid time for your reminder',
+        'Your reminder couldn\'t be set successfully',
+        'error',
+      );
+
+      setTimeout(() => { history.push('/dashboard'); }, 2000);
+    }
   }
 
   render() {
