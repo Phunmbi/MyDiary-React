@@ -3,9 +3,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import '../styles/styles.scss';
 import authenticate from '../components/hoc/authenticate';
 import LandingPage from '../views/LandingPage';
-import Dashboard from '../components/dashboard';
+import Dashboard from '../components/Dashboard';
 import Signin from '../components/auth/signin'
-import Add from '../components/add';
+import Add from '../components/Add';
 
 const App = () => (
   <BrowserRouter>
