@@ -59,7 +59,7 @@ input:focus, textarea:focus{
     outline: none
 }
 
-input:disabled{
+button:disabled{
     cursor: default !important;
     background-color: grey !important;
 }
@@ -293,4 +293,12 @@ span{
     margin: 10px auto 30px auto;
     max-width: 1100px;
     flex-wrap: wrap;
+}
+
+#signOut{
+    background-color: $navyblue;
+    color: $yellow;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 400;
 }
