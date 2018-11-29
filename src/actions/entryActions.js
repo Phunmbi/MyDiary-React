@@ -83,3 +83,22 @@ export const editEntry = (body, id) => async (dispatch) => {
     });
   }
 };
+
+export const deleteEntry = (id) => async (dispatch) => {
+  try {
+    const response = await axios.delete(`${BASEURL}/entries/${id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+    dispatch({
+      type: types.DELETE_ENTRY,
+      payload: response.data,
+    });
+  } catch (error) {
+    dispatch({
+      type: types.DELETE_ENTRY_ERROR,
+      payload: error.response,
+    });
+  }
+};

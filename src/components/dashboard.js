@@ -9,11 +9,10 @@ import Ellipsis from '../assets/Ellipsis.gif';
 class Dashboard extends Component {
   state = {
     entries: [],
-    error: [],
   }
 
   componentDidMount = () => {
-    const { getAllEntries: getEntries  } = this.props;
+    const { getAllEntries: getEntries } = this.props;
     getEntries();
   }
 
@@ -28,10 +27,6 @@ class Dashboard extends Component {
     if (allEntries.status === 200 && allEntries.data.length === 0) {
       this.setState({ entries: 'no entries' });
     }
-
-    if (allEntries.status !== 200) {
-      this.setState({ error: response.entries.error });
-    }
   };
 
   render() {
@@ -39,9 +34,6 @@ class Dashboard extends Component {
     return (
       <div className="dashboard">
         <Header />
-        <section>
-          <h1 id="response" />
-        </section>
         {localStorage.getItem('firstName')
           ? (
             <h1>Welcome to your Diary {localStorage.getItem('firstName').charAt(0).toUpperCase() + localStorage.getItem('firstName').slice(1, localStorage.getItem('firstName').length)}</h1>
@@ -53,24 +45,24 @@ class Dashboard extends Component {
         <section>
           <h3>Dashboard</h3>
         </section>
-        {entries.length > 0 ?
-          (
+        {entries.length > 0
+          ? (
             <section id="section">
-              {entries === 'no entries' ?
-                (
+              {entries === 'no entries'
+                ? (
                   <div>
                     <p>Welcome to my Diary. Here's a little guide to help you know your way around.</p>
                     <p>To add a new entry, just click on the big blue + button in the bottom corner.</p>
                     <p>And if you'd like us to help remind you to pen something down, click on the icon in the upper right corner. Enjoy.</p>
                   </div>
-                ) :
-                (
+                )
+                : (
                   <Card entries={entries} />
                 )
               }
             </section>
-          ) :
-          (
+          )
+          : (
             <div id="loadingModal">
               <div className="loadingModal-main">
                 <img src={Ellipsis} alt="Loading" />
@@ -78,19 +70,6 @@ class Dashboard extends Component {
             </div>
           )
         }
-        <div id="deleteModal">
-          <div className="deleteModal-main">
-            <div className="deleteModal-question">
-              <p id="response" />
-              <p>Are you sure you want to delete this entry?</p>
-            </div>
-            <div className="deleteModal-button">
-              <button type="button" id="yes-button" className="button">Yes</button>
-              <button type="button" id="no-button" className="button">No</button>
-            </div>
-          </div>
-        </div>
-
         <div className="add">
           <Link to="/entries/add"><span>+</span></Link>
         </div>
@@ -101,6 +80,6 @@ class Dashboard extends Component {
 
 const mapStatetoProps = (state) => {
   return { response: state };
-}
+};
 
 export default connect(mapStatetoProps, { getAllEntries })(Dashboard);

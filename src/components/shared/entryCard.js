@@ -13,7 +13,7 @@ class Card extends Component {
             <p>{entry.title.slice(0, 24)}...</p>
             <p>{entry.time_created.slice(0, 10)}</p>
           </div>
-          <Link to={`/entries/${entry.id}`}>
+          <Link to={`/entries/view/${entry.id}`}>
             <div className="card-details">
               <p>{entry.details.slice(0, 200)}...</p>
             </div>
@@ -22,7 +22,7 @@ class Card extends Component {
             <Link to={`/entries/edit/${entry.id}`}>
               <img className="clickIcons" src={Edit} alt="Edit" />
             </Link>
-            <Link to="/">
+            <Link to={`/entries/delete/${entry.id}`}>
               <img className="clickIcons" src={Delete} alt="Delete" />
             </Link>
           </div>

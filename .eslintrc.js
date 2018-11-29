@@ -45,9 +45,13 @@ module.exports = {
     'react/no-array-index-key': ['off'],
     'jsx-a11y/no-static-element-interactions': ['off'],
     'jsx-a11y/click-events-have-key-events': ['off'],
+    'jsx-a11y/no-noninteractive-element-interactions': ['off'],
     'react/sort-comp': ['off'],
     'jsx-a11y/label-has-associated-control': [ 'error', { 'required': { 'some': [ 'nesting', 'id'  ]} }],
     'jsx-a11y/label-has-for': [ 'error', { 'required': { 'some': [ 'nesting', 'id'  ]} }],
-    'no-param-reassign': ['off']
+    'no-param-reassign': ['off'],
+    'react/no-unescaped-entities': ['off'],
+    'max-len': ['off'],
+    'arrow-body-style': ['off']
   },
 };

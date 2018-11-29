@@ -8,3 +8,5 @@ export const VIEW_ENTRY = 'VIEW_ENTRY';
 export const VIEW_ENTRY_ERROR = 'VIEW_ENTRY_ERROR';
 export const EDIT_ENTRY = 'EDIT_ENTRY';
 export const EDIT_ENTRY_ERROR = 'EDIT_ENTRY_ERROR';
+export const DELETE_ENTRY = 'DELETE_ENTRY';
+export const DELETE_ENTRY_ERROR = 'DELETE_ENTRY_ERROR';

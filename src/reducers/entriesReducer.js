@@ -19,6 +19,10 @@ export default (state = initialState, action) => {
       return { ...state, editedEntry: action.payload };
     case types.EDIT_ENTRY_ERROR:
       return { ...state, editedEntryError: action.payload };
+    case types.DELETE_ENTRY:
+      return { ...state, deletedEntry: action.payload };
+    case types.DELETE_ENTRY_ERROR:
+      return { ...state, deletedEntryError: action.payload };
     default:
       return state;
   }

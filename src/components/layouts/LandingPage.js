@@ -2,15 +2,10 @@ import React from 'react';
 import Signup from '../auth/Signup';
 
 const LandingPage = (props) => {
-
-  const handleClick = () => {
-    console.log(props);
-  }
-
   return (
     <div className="hero">
       <div className="title">
-        <h1 onClick={handleClick}>MyDiary</h1>
+        <h1>MyDiary</h1>
       </div>
 
       <section>
@@ -19,7 +14,7 @@ const LandingPage = (props) => {
           <p>With the ability to edit and delete entries as you please.</p>
           <p>All wrapped in a lightweight app built for your convenience.</p>
         </div>
-          <Signup {...props} />
+        <Signup {...props} />
       </section>
     </div>
   );

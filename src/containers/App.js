@@ -8,16 +8,18 @@ import Signin from '../components/auth/Signin';
 import Add from '../components/Add';
 import Edit from '../components/Edit';
 import ViewEntry from '../components/ViewEntry';
+import DeleteEntry from '../components/Delete';
 
 const App = () => (
   <BrowserRouter>
     <div>
       <Route exact path="/" component={LandingPage} />
-      <Route path="/auth/signin" component={Signin} />
-      <Route path="/dashboard" component={authenticate(Dashboard)} />
-      <Route path="/entries/add" component={authenticate(Add)} />
+      <Route exact path="/auth/signin" component={Signin} />
+      <Route exact path="/dashboard" component={authenticate(Dashboard)} />
+      <Route exact path="/entries/add" component={authenticate(Add)} />
       <Route exact path="/entries/edit/:id" component={authenticate(Edit)} />
-      <Route exact path="/entries/:id" component={authenticate(ViewEntry)} />
+      <Route exact path="/entries/view/:id" component={authenticate(ViewEntry)} />
+      <Route exact path="/entries/delete/:id" component={authenticate(DeleteEntry)} />
     </div>
   </BrowserRouter>
 );

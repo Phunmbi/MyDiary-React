@@ -9,6 +9,8 @@ const initialState = {
   singleEntryError: [],
   editedEntry: [],
   editedEntryError: [],
+  deletedEntry: [],
+  deletedEntryError: [],
   entries: [],
   entriesError: [],
   error: [],
