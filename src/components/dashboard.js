@@ -9,7 +9,7 @@ import Ellipsis from '../assets/Ellipsis.gif';
 class Dashboard extends Component {
   state = {
     entries: [],
-    error: []
+    error: [],
   }
 
   componentDidMount = () => {
@@ -35,21 +35,21 @@ class Dashboard extends Component {
   };
 
   render() {
-    const { entries } = this.state
+    const { entries } = this.state;
     return (
       <div className="dashboard">
         <Header />
         <section>
-          <h1 id="response"></h1>
+          <h1 id="response" />
         </section>
-            {localStorage.getItem('firstName') ?
-              (
-                <h1>Welcome to your Diary {localStorage.getItem('firstName').charAt(0).toUpperCase() + localStorage.getItem('firstName').slice(1, localStorage.getItem('firstName').length)}</h1>
-              ) :
-              (
-                null
-              )
-            }
+        {localStorage.getItem('firstName')
+          ? (
+            <h1>Welcome to your Diary {localStorage.getItem('firstName').charAt(0).toUpperCase() + localStorage.getItem('firstName').slice(1, localStorage.getItem('firstName').length)}</h1>
+          )
+          : (
+            null
+          )
+        }
         <section>
           <h3>Dashboard</h3>
         </section>
@@ -81,12 +81,12 @@ class Dashboard extends Component {
         <div id="deleteModal">
           <div className="deleteModal-main">
             <div className="deleteModal-question">
-              <p id="response"></p>
+              <p id="response" />
               <p>Are you sure you want to delete this entry?</p>
             </div>
             <div className="deleteModal-button">
-              <button id="yes-button" className="button">Yes</button>
-              <button id="no-button" className="button">No</button>
+              <button type="button" id="yes-button" className="button">Yes</button>
+              <button type="button" id="no-button" className="button">No</button>
             </div>
           </div>
         </div>

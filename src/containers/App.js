@@ -4,7 +4,7 @@ import '../styles/styles.scss';
 import authenticate from '../components/hoc/authenticate';
 import LandingPage from '../views/LandingPage';
 import Dashboard from '../components/Dashboard';
-import Signin from '../components/auth/signin'
+import Signin from '../components/auth/Signin';
 import Add from '../components/Add';
 
 const App = () => (

@@ -12,8 +12,8 @@ class Signin extends Component {
     password: '',
     errors: {
       email: '',
-      password: ''
-    }
+      password: '',
+    },
   };
 
   handleChange = (event) => {
@@ -31,13 +31,13 @@ class Signin extends Component {
 
     // Store validation errors
     this.setState({
-      errors: { ...errors, status }
+      errors: { ...errors, status },
     });
 
     // Process form fields
     const body = {
       email: email.trim(),
-      password: password.trim()
+      password: password.trim(),
     };
 
     // If there are no validation errors
@@ -72,7 +72,7 @@ class Signin extends Component {
       swal(
         'Welcome back',
         'You have successfully signed into your account',
-        'success'
+        'success',
       );
       // Reset styles
       submit.innerHTML = 'Create Account';
@@ -87,7 +87,7 @@ class Signin extends Component {
     const fieldNames = ['email', 'password'];
     const status = validateAuth({ email, password }, fieldNames);
 
-    return(
+    return (
       <div className="hero">
         <div className="title">
           <h1>MyDiary</h1>
