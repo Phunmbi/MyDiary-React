@@ -1,2 +1,4 @@
 export const USER_AUTH = 'SIGN_UP';
 export const USER_AUTH_ERROR = 'SIGN_UP_ERROR';
+export const GET_ALL_ENTRIES = 'GET_ALL_ENTRIES';
+export const GET_ALL_ENTRIES_ERROR = 'GET_ALL_ENTRIES_ERROR';
