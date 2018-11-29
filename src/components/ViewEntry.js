@@ -18,7 +18,6 @@ class ViewEntry extends Component {
   render() {
     const response = this.props;
     const entry = response.response.singleEntry;
-    console.log(entry);
     return (
       <div className="dashboard">
         <Header />
@@ -37,7 +36,7 @@ class ViewEntry extends Component {
                   <Link to="/dashboard">
                     <img src={Home} alt="Home" />
                   </Link>
-                  <Link to="/entries/edit">
+                  <Link to={`/entries/edit/${entry.data.id}`}>
                     <img src={Edit} alt="Edit" title="Edit Entry" />
                   </Link>
                   <Link to="/entries/delete">
@@ -54,7 +53,6 @@ class ViewEntry extends Component {
               </div>
             </div>
           )}
-
       </div>
     );
   }

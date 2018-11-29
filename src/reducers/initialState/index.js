@@ -7,6 +7,8 @@ const initialState = {
   newEntryError: [],
   singleEntry: [],
   singleEntryError: [],
+  editedEntry: [],
+  editedEntryError: [],
   entries: [],
   entriesError: [],
   error: [],

@@ -49,7 +49,7 @@ class Add extends Component {
         'success',
       );
 
-      history.push('/dashboard');
+      setTimeout(() => { history.push('/dashboard'); }, 2000);
     }
   }
 

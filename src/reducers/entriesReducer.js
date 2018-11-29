@@ -15,6 +15,10 @@ export default (state = initialState, action) => {
       return { ...state, singleEntry: action.payload };
     case types.VIEW_ENTRY_ERROR:
       return { ...state, singleEntryError: action.payload };
+    case types.EDIT_ENTRY:
+      return { ...state, editedEntry: action.payload };
+    case types.EDIT_ENTRY_ERROR:
+      return { ...state, editedEntryError: action.payload };
     default:
       return state;
   }

@@ -16,8 +16,8 @@ const App = () => (
       <Route path="/auth/signin" component={Signin} />
       <Route path="/dashboard" component={authenticate(Dashboard)} />
       <Route path="/entries/add" component={authenticate(Add)} />
-      <Route path="/entries/edit/:id" component={authenticate(Edit)} />
-      <Route path="/entries/:id" component={authenticate(ViewEntry)} />
+      <Route exact path="/entries/edit/:id" component={authenticate(Edit)} />
+      <Route exact path="/entries/:id" component={authenticate(ViewEntry)} />
     </div>
   </BrowserRouter>
 );

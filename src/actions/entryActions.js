@@ -61,3 +61,25 @@ export const viewEntry = (id) => async (dispatch) => {
     });
   }
 };
+
+export const editEntry = (body, id) => async (dispatch) => {
+  try {
+    const response = await axios({
+      method: 'put',
+      url: `${BASEURL}/entries/${id}`,
+      data: body,
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+    dispatch({
+      type: types.EDIT_ENTRY,
+      payload: response.data,
+    });
+  } catch (error) {
+    dispatch({
+      type: types.EDIT_ENTRY_ERROR,
+      payload: error.response,
+    });
+  }
+};

@@ -6,3 +6,5 @@ export const ADD_ENTRY = 'ADD_ENTRY';
 export const ADD_ENTRY_ERROR = 'ADD_ENTRY_ERROR';
 export const VIEW_ENTRY = 'VIEW_ENTRY';
 export const VIEW_ENTRY_ERROR = 'VIEW_ENTRY_ERROR';
+export const EDIT_ENTRY = 'EDIT_ENTRY';
+export const EDIT_ENTRY_ERROR = 'EDIT_ENTRY_ERROR';

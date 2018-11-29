@@ -19,7 +19,7 @@ class Card extends Component {
             </div>
           </Link>
           <div className="card-actions">
-            <Link to="/entries/edit">
+            <Link to={`/entries/edit/${entry.id}`}>
               <img className="clickIcons" src={Edit} alt="Edit" />
             </Link>
             <Link to="/">
