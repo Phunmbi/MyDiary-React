@@ -4,8 +4,8 @@
   "description": "A React front end implementation of the My Diary project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack --mode production",
     "test": "jest",
     "test-coverage": "jest test --coverage",
     "test-coverage-watch": "jest test --coverage --watch"
