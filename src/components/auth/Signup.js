@@ -6,7 +6,7 @@ import { signup } from '../../actions/authActions';
 import validateAuth from '../../lib/validation';
 import spinner from '../../assets/Spinner-1s.gif';
 
-class Signup extends Component {
+export class Signup extends Component {
   state = {
     firstName: '',
     lastName: '',
@@ -20,7 +20,7 @@ class Signup extends Component {
       password: '',
       confirmPassword: '',
 
-    }
+    },
   }
 
   handleSubmit = async (event) => {
@@ -28,13 +28,27 @@ class Signup extends Component {
     const { signup: signupUser } = this.props;
 
     // Run validation
-    const { firstName, lastName, email, password, confirmPassword, errors } = this.state;
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+      errors,
+    } = this.state;
+
     const fieldNames = ['firstname', 'lastname', 'email', 'password', 'confirmPassword'];
-    const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, event.target.id, event.target.value, fieldNames);
+    const status = validateAuth({
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+    }, event.target.id, event.target.value, fieldNames);
 
     // Store validation errors
     this.setState({
-      errors: { ...errors, status }
+      errors: { ...errors, status },
     });
 
     // Process form fields
@@ -42,13 +56,13 @@ class Signup extends Component {
       firstName: firstName.trim(),
       lastName: lastName.trim(),
       email: email.trim(),
-      password: password.trim()
+      password: password.trim(),
     };
 
     // If there are no validation errors
     if (!status.status) {
       // Set loading icon and request
-      event.target.children.submit.innerHTML = ''
+      event.target.children.submit.innerHTML = '';
       event.target.children.submit.style.background = `#FEEF6D url(${spinner}) no-repeat center`;
 
       // Clear input fields
@@ -69,9 +83,9 @@ class Signup extends Component {
 
   componentDidUpdate = () => {
     const { response, history } = this.props;
+    const submit = document.getElementById('submit');
     if (response.auth.error) {
       const serverError = document.getElementById('errorResponse');
-      const submit = document.getElementById('submit');
 
       // Return and display error
       serverError.innerHTML = response.auth.error.data.Error;
@@ -91,11 +105,25 @@ class Signup extends Component {
   }
 
   render() {
-    const { firstName, lastName, email, password, confirmPassword, errors } = this.state;
-    const fieldNames = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
-    const status = validateAuth({ firstName, lastName, email, password, confirmPassword }, fieldNames);
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+      errors,
+    } = this.state;
 
-    return(
+    const fieldNames = ['firstName', 'lastName', 'email', 'password', 'confirmPassword'];
+    const status = validateAuth({
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+    }, fieldNames);
+
+    return (
       <div className="hero-account">
         <h3>Create your MyDiary Account</h3>
         <p className="errorResponse" id="errorResponse" />
@@ -129,12 +157,12 @@ class Signup extends Component {
           <Link to="/auth/signin"> Sign in</Link>
         </p>
       </div>
-    )
+    );
   }
 }
 
-const mapStatetoProps = (state) => {
+const mapStateToProps = (state) => {
   return { response: state };
-}
+};
 
-export default connect(mapStatetoProps, { signup })(Signup);
+export default connect(mapStateToProps, { signup })(Signup);

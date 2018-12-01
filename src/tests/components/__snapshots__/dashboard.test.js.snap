@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(Dashboard)
+          getAllEntries={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          response={
+            Object {
+              "entries": Object {
+                "entries": Object {
+                  "allEntries": Object {
+                    "data": Object {
+                      "length": 0,
+                      "message": "new",
+                    },
+                    "status": 200,
+                  },
+                },
+              },
+            }
+          }
+        >
+          <Dashboard
+            getAllEntries={[Function]}
+            response={
+              Object {
+                "auth": Object {
+                  "authenticated": null,
+                  "firstName": null,
+                  "lastName": null,
+                },
+                "entries": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+                "profile": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+              }
+            }
+          >
+            <div
+              className="dashboard"
+            >
+              <Header>
+                <header>
+                  <Link
+                    replace={false}
+                    to="/dashboard"
+                  >
+                    <a
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      <h1>
+                        MyDiary
+                      </h1>
+                    </a>
+                  </Link>
+                  <Link
+                    replace={false}
+                    to="/profile"
+                  >
+                    <a
+                      href="/profile"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Profile"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                      />
+                    </a>
+                  </Link>
+                </header>
+              </Header>
+              <section>
+                <h3>
+                  Dashboard
+                </h3>
+              </section>
+              <div
+                id="loadingModal"
+              >
+                <div
+                  className="loadingModal-main"
+                >
+                  <img
+                    alt="Loading"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAEBAQAAACH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  />
+                </div>
+              </div>
+              <div
+                className="add"
+              >
+                <Link
+                  replace={false}
+                  to="/entries/add"
+                >
+                  <a
+                    href="/entries/add"
+                    onClick={[Function]}
+                  >
+                    <span>
+                      +
+                    </span>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </Dashboard>
+        </Connect(Dashboard)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

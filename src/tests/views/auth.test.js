@@ -5,8 +5,8 @@ import Root from '../../root';
 const wrapper = shallow(
   <Root>
     <Signup />
-  </Root>
-)
+  </Root>,
+);
 
 describe('Signup UI', () => {
   it('should render correctly in "debug" mode', () => {

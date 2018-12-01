@@ -6,7 +6,7 @@ import Card from './shared/entryCard';
 import { getAllEntries } from '../actions/entryActions';
 import Ellipsis from '../assets/Ellipsis.gif';
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
   state = {
     entries: [],
   }

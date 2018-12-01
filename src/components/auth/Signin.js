@@ -6,7 +6,7 @@ import { signin } from '../../actions/authActions';
 import validateAuth from '../../lib/validation';
 import spinner from '../../assets/Spinner-1s.gif';
 
-class Signin extends Component {
+export class Signin extends Component {
   state = {
     email: '',
     password: '',
@@ -56,9 +56,9 @@ class Signin extends Component {
 
   componentDidUpdate = () => {
     const { response, history } = this.props;
+    const submit = document.getElementById('submit');
     if (response.auth.error) {
       const serverError = document.getElementById('errorResponse');
-      const submit = document.getElementById('submit');
 
       // Return and display error
       serverError.innerHTML = response.auth.error.data.Error || response.auth.error.data.message;
@@ -123,7 +123,7 @@ class Signin extends Component {
           </div>
         </section>
       </div>
-    )
+    );
   }
 }
 

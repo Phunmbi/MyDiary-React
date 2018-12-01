@@ -9,5 +9,5 @@ ReactDOM.render(
   <Root>
     <App />
   </Root>,
-  document.getElementById('index')
+  document.getElementById('index'),
 );

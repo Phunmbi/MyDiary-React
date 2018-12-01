@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <App>
+          <BrowserRouter>
+            <Router
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "createHref": [Function],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+            >
+              <div>
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/"
+                >
+                  <LandingPage
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "createHref": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                  >
+                    <div>
+                      <LandingPage
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "createHref": [Function],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                      >
+                        <div
+                          className="hero"
+                        >
+                          <div
+                            className="title"
+                          >
+                            <h1>
+                              MyDiary
+                            </h1>
+                          </div>
+                          <section>
+                            <div
+                              className="hero-marketing"
+                            >
+                              <p>
+                                Let's help you make it easier to keep your diary. 
+                              </p>
+                              <p>
+                                With the ability to edit and delete entries as you please.
+                              </p>
+                              <p>
+                                All wrapped in a lightweight app built for your convenience.
+                              </p>
+                            </div>
+                            <Connect(Signup)
+                              history={
+                                Object {
+                                  "action": "POP",
+                                  "block": [Function],
+                                  "createHref": [Function],
+                                  "go": [Function],
+                                  "goBack": [Function],
+                                  "goForward": [Function],
+                                  "length": 1,
+                                  "listen": [Function],
+                                  "location": Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  },
+                                  "push": [Function],
+                                  "replace": [Function],
+                                }
+                              }
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                              match={
+                                Object {
+                                  "isExact": true,
+                                  "params": Object {},
+                                  "path": "/",
+                                  "url": "/",
+                                }
+                              }
+                            >
+                              <Signup
+                                history={
+                                  Object {
+                                    "action": "POP",
+                                    "block": [Function],
+                                    "createHref": [Function],
+                                    "go": [Function],
+                                    "goBack": [Function],
+                                    "goForward": [Function],
+                                    "length": 1,
+                                    "listen": [Function],
+                                    "location": Object {
+                                      "hash": "",
+                                      "pathname": "/",
+                                      "search": "",
+                                      "state": undefined,
+                                    },
+                                    "push": [Function],
+                                    "replace": [Function],
+                                  }
+                                }
+                                location={
+                                  Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  }
+                                }
+                                match={
+                                  Object {
+                                    "isExact": true,
+                                    "params": Object {},
+                                    "path": "/",
+                                    "url": "/",
+                                  }
+                                }
+                                response={
+                                  Object {
+                                    "auth": Object {
+                                      "authenticated": null,
+                                      "firstName": null,
+                                      "lastName": null,
+                                    },
+                                    "entries": Object {
+                                      "authenticated": "",
+                                      "deletedEntry": Array [],
+                                      "deletedEntryError": Array [],
+                                      "deletedReminder": Array [],
+                                      "deletedReminderError": Array [],
+                                      "editedEntry": Array [],
+                                      "editedEntryError": Array [],
+                                      "entries": Array [],
+                                      "entriesError": Array [],
+                                      "error": Array [],
+                                      "existingReminder": Array [],
+                                      "existingReminderError": Array [],
+                                      "firstName": "",
+                                      "lastName": "",
+                                      "newEntry": Array [],
+                                      "newEntryError": Array [],
+                                      "newReminder": Array [],
+                                      "newReminderError": Array [],
+                                      "singleEntry": Array [],
+                                      "singleEntryError": Array [],
+                                      "status": "",
+                                    },
+                                    "profile": Object {
+                                      "authenticated": "",
+                                      "deletedEntry": Array [],
+                                      "deletedEntryError": Array [],
+                                      "deletedReminder": Array [],
+                                      "deletedReminderError": Array [],
+                                      "editedEntry": Array [],
+                                      "editedEntryError": Array [],
+                                      "entries": Array [],
+                                      "entriesError": Array [],
+                                      "error": Array [],
+                                      "existingReminder": Array [],
+                                      "existingReminderError": Array [],
+                                      "firstName": "",
+                                      "lastName": "",
+                                      "newEntry": Array [],
+                                      "newEntryError": Array [],
+                                      "newReminder": Array [],
+                                      "newReminderError": Array [],
+                                      "singleEntry": Array [],
+                                      "singleEntryError": Array [],
+                                      "status": "",
+                                    },
+                                  }
+                                }
+                                signup={[Function]}
+                              >
+                                <div
+                                  className="hero-account"
+                                >
+                                  <h3>
+                                    Create your MyDiary Account
+                                  </h3>
+                                  <p
+                                    className="errorResponse"
+                                    id="errorResponse"
+                                  />
+                                  <form
+                                    onSubmit={[Function]}
+                                  >
+                                    <input
+                                      id="firstName"
+                                      onChange={[Function]}
+                                      placeholder="First Name"
+                                      required={true}
+                                      type="text"
+                                    />
+                                    <span
+                                      className="errorResponse"
+                                    />
+                                    <input
+                                      id="lastName"
+                                      onChange={[Function]}
+                                      placeholder="Last Name"
+                                      required={true}
+                                      type="text"
+                                    />
+                                    <span
+                                      className="errorResponse"
+                                    />
+                                    <input
+                                      id="email"
+                                      onChange={[Function]}
+                                      placeholder="Email"
+                                      required={true}
+                                      type="email"
+                                    />
+                                    <span
+                                      className="errorResponse"
+                                    />
+                                    <input
+                                      id="password"
+                                      min="8"
+                                      onChange={[Function]}
+                                      placeholder="Password"
+                                      required={true}
+                                      type="password"
+                                    />
+                                    <span
+                                      className="errorResponse"
+                                    />
+                                    <input
+                                      id="confirmPassword"
+                                      min="8"
+                                      onChange={[Function]}
+                                      placeholder="Confirm Password"
+                                      required={true}
+                                      type="password"
+                                    />
+                                    <span
+                                      className="errorResponse"
+                                    />
+                                    <button
+                                      id="submit"
+                                      type="submit"
+                                    >
+                                      Create Account
+                                    </button>
+                                  </form>
+                                  <p>
+                                    Already have an account? then
+                                    <Link
+                                      replace={false}
+                                      to="/auth/signin"
+                                    >
+                                      <a
+                                        href="/auth/signin"
+                                        onClick={[Function]}
+                                      >
+                                         Sign in
+                                      </a>
+                                    </Link>
+                                  </p>
+                                </div>
+                              </Signup>
+                            </Connect(Signup)>
+                          </section>
+                        </div>
+                      </LandingPage>
+                    </div>
+                  </LandingPage>
+                </Route>
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/auth/signin"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/dashboard"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/entries/add"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/entries/edit/:id"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/entries/view/:id"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/entries/delete/:id"
+                />
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/profile"
+                />
+              </div>
+            </Router>
+          </BrowserRouter>
+        </App>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(Profile)
+          getAllEntries={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          getReminder={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+        >
+          <Profile
+            addReminder={[Function]}
+            deleteReminder={[Function]}
+            entries={Array []}
+            getAllEntries={[Function]}
+            getReminder={[Function]}
+            response={
+              Object {
+                "authenticated": "",
+                "deletedEntry": Array [],
+                "deletedEntryError": Array [],
+                "deletedReminder": Array [],
+                "deletedReminderError": Array [],
+                "editedEntry": Array [],
+                "editedEntryError": Array [],
+                "entries": Array [],
+                "entriesError": Array [],
+                "error": Array [],
+                "existingReminder": Array [],
+                "existingReminderError": Array [],
+                "firstName": "",
+                "lastName": "",
+                "newEntry": Array [],
+                "newEntryError": Array [],
+                "newReminder": Array [],
+                "newReminderError": Array [],
+                "singleEntry": Array [],
+                "singleEntryError": Array [],
+                "status": "",
+              }
+            }
+            signout={[Function]}
+          >
+            <div
+              className="dashboard"
+            >
+              <Header>
+                <header>
+                  <Link
+                    replace={false}
+                    to="/dashboard"
+                  >
+                    <a
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      <h1>
+                        MyDiary
+                      </h1>
+                    </a>
+                  </Link>
+                  <Link
+                    replace={false}
+                    to="/profile"
+                  >
+                    <a
+                      href="/profile"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Profile"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                      />
+                    </a>
+                  </Link>
+                </header>
+              </Header>
+              <section>
+                <h3>
+                  My Profile
+                </h3>
+              </section>
+              <div
+                id="loadingModal"
+              >
+                <div
+                  className="loadingModal-main"
+                >
+                  <img
+                    alt="Loading"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAEBAQAAACH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  />
+                </div>
+              </div>
+              <section
+                className="profile"
+              >
+                <Link
+                  replace={false}
+                  to="/dashboard"
+                >
+                  <a
+                    href="/dashboard"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="Home"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                    />
+                  </a>
+                </Link>
+                <p
+                  id="error"
+                />
+                <div>
+                  <h4>
+                    Reminder Setting
+                  </h4>
+                  <p>
+                    What time would you like to be reminded daily?
+                  </p>
+                  <input
+                    id="time"
+                    label=""
+                    name="time"
+                    required={true}
+                    type="time"
+                  />
+                  <button
+                    id="set"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Set Reminder
+                  </button>
+                  <button
+                    id="delete"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Delete Reminder
+                  </button>
+                  <p
+                    id="reminder"
+                  />
+                </div>
+                <div>
+                  <h4>
+                    Total Number of Entries
+                  </h4>
+                  <p
+                    id="entries"
+                  >
+                    You have a total of 0 entries
+                  </p>
+                </div>
+                <button
+                  id="signOut"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Sign Out
+                </button>
+              </section>
+            </div>
+          </Profile>
+        </Connect(Profile)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

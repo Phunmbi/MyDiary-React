@@ -7,7 +7,7 @@ import Header from './shared/Header';
 import Home from '../assets/icons8-home-page-24.png';
 import spinner from '../assets/Spinner-1s.gif';
 
-class Add extends Component {
+export class Add extends Component {
   handleSubmit = (event) => {
     // Prevent default
     event.preventDefault();

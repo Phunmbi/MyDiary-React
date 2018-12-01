@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewEntry UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(ViewEntry)
+          ViewEntry={[MockFunction]}
+          match={
+            Object {
+              "params": Object {
+                "id": 1,
+              },
+            }
+          }
+        >
+          <ViewEntry
+            ViewEntry={[MockFunction]}
+            match={
+              Object {
+                "params": Object {
+                  "id": 1,
+                },
+              }
+            }
+            response={
+              Object {
+                "authenticated": "",
+                "deletedEntry": Array [],
+                "deletedEntryError": Array [],
+                "deletedReminder": Array [],
+                "deletedReminderError": Array [],
+                "editedEntry": Array [],
+                "editedEntryError": Array [],
+                "entries": Array [],
+                "entriesError": Array [],
+                "error": Array [],
+                "existingReminder": Array [],
+                "existingReminderError": Array [],
+                "firstName": "",
+                "lastName": "",
+                "newEntry": Array [],
+                "newEntryError": Array [],
+                "newReminder": Array [],
+                "newReminderError": Array [],
+                "singleEntry": Array [],
+                "singleEntryError": Array [],
+                "status": "",
+              }
+            }
+            viewEntry={[Function]}
+          >
+            <div
+              className="dashboard"
+            >
+              <Header>
+                <header>
+                  <Link
+                    replace={false}
+                    to="/dashboard"
+                  >
+                    <a
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      <h1>
+                        MyDiary
+                      </h1>
+                    </a>
+                  </Link>
+                  <Link
+                    replace={false}
+                    to="/profile"
+                  >
+                    <a
+                      href="/profile"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Profile"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                      />
+                    </a>
+                  </Link>
+                </header>
+              </Header>
+              <div
+                id="loadingModal"
+              >
+                <div
+                  className="loadingModal-main"
+                >
+                  <img
+                    alt="Loading"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAEBAQAAACH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  />
+                </div>
+              </div>
+            </div>
+          </ViewEntry>
+        </Connect(ViewEntry)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

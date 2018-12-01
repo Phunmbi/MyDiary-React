@@ -8,7 +8,7 @@ import Edit from '../assets/icons8-pencil-26.png';
 import Delete from '../assets/icons8-trash-26.png';
 import Ellipsis from '../assets/Ellipsis.gif';
 
-class ViewEntry extends Component {
+export class ViewEntry extends Component {
   componentDidMount() {
     const { viewEntry: viewSingleEntry, match } = this.props;
     const { id } = match.params;
@@ -39,7 +39,7 @@ class ViewEntry extends Component {
                   <Link to={`/entries/edit/${entry.data.id}`}>
                     <img src={Edit} alt="Edit" title="Edit Entry" />
                   </Link>
-                  <Link to="/entries/delete">
+                  <Link to={`/entries/delete/${entry.data.id}`}>
                     <img src={Delete} alt="Delete" title="Delete Entry" />
                   </Link>
                 </div>

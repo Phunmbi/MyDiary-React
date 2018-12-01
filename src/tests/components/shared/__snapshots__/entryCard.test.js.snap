@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Card
+          entries={
+            Array [
+              Object {
+                "details": "details",
+                "id": 1,
+                "time_created": "timecreated",
+                "title": "title",
+              },
+            ]
+          }
+        >
+          <div
+            className="card-wrapper"
+          >
+            <div
+              className="card"
+              key="1"
+            >
+              <div
+                className="card-title"
+              >
+                <p>
+                  title
+                  ...
+                </p>
+                <p>
+                  timecreate
+                </p>
+              </div>
+              <Link
+                replace={false}
+                to="/entries/view/1"
+              >
+                <a
+                  href="/entries/view/1"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="card-details"
+                  >
+                    <p>
+                      details
+                      ...
+                    </p>
+                  </div>
+                </a>
+              </Link>
+              <div
+                className="card-actions"
+              >
+                <Link
+                  replace={false}
+                  to="/entries/edit/1"
+                >
+                  <a
+                    href="/entries/edit/1"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="Edit"
+                      className="clickIcons"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                    />
+                  </a>
+                </Link>
+                <Link
+                  replace={false}
+                  to="/entries/delete/1"
+                >
+                  <a
+                    href="/entries/delete/1"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="Delete"
+                      className="clickIcons"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;
