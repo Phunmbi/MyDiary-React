@@ -10,15 +10,15 @@ const state = {
   auth: {
     authenticated: localStorage.getItem('token'),
     firstName: localStorage.getItem('firstName'),
-    lastName: localStorage.getItem('lastName')
-  }
+    lastName: localStorage.getItem('lastName'),
+  },
 };
 
 export default ({ children }) => {
   const store = createStore(
     rootReducer,
     state,
-    enhancers(applyMiddleware(thunk))
+    enhancers(applyMiddleware(thunk)),
   );
 
   return (

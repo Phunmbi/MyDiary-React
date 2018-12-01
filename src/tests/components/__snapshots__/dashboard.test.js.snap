@@ -59,8 +59,13 @@ exports[`Dashboard UI render features component should render as expected 1`] = 
             [MockFunction] {
               "calls": Array [
                 Array [],
+                Array [],
               ],
               "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
                 Object {
                   "isThrow": false,
                   "value": undefined,
@@ -72,13 +77,11 @@ exports[`Dashboard UI render features component should render as expected 1`] = 
             Object {
               "entries": Object {
                 "entries": Object {
-                  "allEntries": Object {
-                    "data": Object {
-                      "length": 0,
-                      "message": "new",
-                    },
-                    "status": 200,
+                  "data": Object {
+                    "length": 0,
+                    "message": "old",
                   },
+                  "status": 200,
                 },
               },
             }

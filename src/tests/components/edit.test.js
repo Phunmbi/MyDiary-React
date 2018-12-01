@@ -36,9 +36,7 @@ const props = {
       },
     },
     editedEntry: {
-      response: {
-        status: 200,
-      },
+      status: 200,
     },
   },
   match: {

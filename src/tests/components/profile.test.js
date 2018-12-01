@@ -13,6 +13,7 @@ const props = {
   getAllEntries: jest.fn(),
 };
 
+jest.useFakeTimers();
 beforeEach(() => {
   wrapper = mount(
     <Root>
@@ -134,7 +135,7 @@ describe('Profile Functionality', () => {
           },
         },
         previousSibling: {
-          value: 'value',
+          value: 'vale',
         },
       },
     };
@@ -177,7 +178,7 @@ describe('Profile Functionality', () => {
     });
   });
 
-  it('should simulate setting a reminder', () => {
+  it('should simulate deleting a reminder', () => {
     const setButton = wrapped.find('#delete');
 
     const inst = wrapped.instance();
@@ -212,7 +213,7 @@ describe('Profile Functionality', () => {
     setButton.simulate('click', mockedEvent);
   });
 
-  it('should simulate setting a reminder', () => {
+  it('should simulate signout', () => {
     const setButton = wrapped.find('#signOut');
 
     const inst = wrapped.instance();

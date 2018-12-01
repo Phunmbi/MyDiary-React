@@ -7,6 +7,7 @@ import Root from '../../root';
 
 let wrapper;
 let wrapped;
+let wrappedLess;
 
 const response = {
   addEntry: jest.fn(),
@@ -16,6 +17,18 @@ const response = {
         message: 'new',
       },
       length: 5,
+    },
+  },
+};
+
+const responseLess = {
+  addEntry: jest.fn(),
+  entries: {
+    newEntryError: {
+      data: {
+        message: 'new',
+      },
+      length: 0,
     },
   },
 };
@@ -49,6 +62,12 @@ beforeEach(() => {
       response={response}
     />,
   );
+
+  wrappedLess = shallow(
+    <Add
+      response={responseLess}
+    />,
+  );
 });
 
 afterEach(() => wrapper.unmount());
@@ -65,7 +84,7 @@ describe('Add UI', () => {
 describe('Add Functionality', () => {
   it('should click simulate submit', () => {
     const submitButton = wrapped.find('form');
-
+    jest.runAllTimers();
     const inst = wrapped.instance();
 
     inst.props = {
@@ -101,7 +120,6 @@ describe('Add Functionality', () => {
       },
     };
 
-    jest.runAllTimers();
     submitButton.simulate('submit', mockedEvent);
 
     inst.forceUpdate();
@@ -116,7 +134,66 @@ describe('Add Functionality', () => {
       response: {
         entries: {
           newEntryError: {
+            length: 0,
+          },
+        },
+      },
+    };
+  });
+
+  it('should click simulate submit', () => {
+    const submitButton = wrappedLess.find('form');
+    jest.runAllTimers();
+    const inst = wrappedLess.instance();
+
+    inst.props = {
+      addEntry: jest.fn(),
+      match: {
+        params: {
+          id: 1,
+        },
+      },
+      response: {
+        entries: {
+          newEntryError: {
             length: 4,
+          },
+        },
+      },
+    };
+
+    const mockedEvent = {
+      preventDefault: jest.fn(),
+      target: {
+        reset: jest.fn(),
+        children: {
+          title: 'title',
+          details: 'details',
+          submit: {
+            innerHTML: 'submit',
+            style: {
+              background: 'background',
+            },
+          },
+        },
+      },
+    };
+
+    submitButton.simulate('submit', mockedEvent);
+
+    inst.forceUpdate();
+
+    inst.props = {
+      addEntry: jest.fn(),
+      match: {
+        params: {
+          id: 1,
+        },
+      },
+      response: {
+        entries: {
+          newEntryError: {
+            length: 0,
           },
         },
       },

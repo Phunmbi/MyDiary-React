@@ -9,6 +9,7 @@ let wrapper;
 let wrapped;
 
 beforeEach(() => {
+  jest.useFakeTimers();
   wrapper = mount(
     <Root>
       <MemoryRouter initialEntries={[{ key: 'testkey' }]}>
@@ -36,6 +37,8 @@ describe('Delete UI', () => {
 describe('Delete Functionality', () => {
   it('should click yes', () => {
     const inst = wrapped.instance();
+
+    jest.runAllTimers();
 
     const deleteEntry = jest.fn();
     inst.props = {

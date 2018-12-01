@@ -65,9 +65,7 @@ exports[`Edit UI render features component should render as expected 1`] = `
           response={
             Object {
               "editedEntry": Object {
-                "response": Object {
-                  "status": 200,
-                },
+                "status": 200,
               },
               "singleEntry": Object {
                 "data": Object {

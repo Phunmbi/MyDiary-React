@@ -7,18 +7,32 @@ import Root from '../../root';
 
 let wrapper;
 let wrapped;
+let wrappedMore;
 
 const props = {
   getAllEntries: jest.fn(),
-  entries: {
+  response: {
     entries: {
       entries: {
-        allEntries: {
-          status: 200,
-          data: {
-            length: 0,
-            message: 'new',
-          },
+        status: 200,
+        data: {
+          length: 0,
+          message: 'old',
+        },
+      },
+    },
+  },
+};
+
+const propsMore = {
+  getAllEntries: jest.fn(),
+  response: {
+    entries: {
+      entries: {
+        status: 200,
+        data: {
+          length: 5,
+          message: 'old',
         },
       },
     },
@@ -44,7 +58,7 @@ beforeEach(() => {
       <MemoryRouter initialEntries={[{ key: 'testkey' }]}>
         <DashboardComponent
           getAllEntries={props.getAllEntries}
-          response={props.entries}
+          response={props.response}
         />
       </MemoryRouter>
     </Root>,
@@ -53,7 +67,14 @@ beforeEach(() => {
   wrapped = shallow(
     <Dashboard
       getAllEntries={props.getAllEntries}
-      response={props.entries}
+      response={props.response}
+    />,
+  );
+
+  wrappedMore = shallow(
+    <Dashboard
+      getAllEntries={props.getAllEntries}
+      response={propsMore.response}
     />,
   );
 });
@@ -72,7 +93,6 @@ describe('Dashboard UI', () => {
 describe('Dashboard Functionality', () => {
   it('should click simulate submit', () => {
     const inst = wrapped.instance();
-
     inst.props = {
       addEntry: jest.fn(),
       match: {
@@ -80,17 +100,18 @@ describe('Dashboard Functionality', () => {
           id: 1,
         },
       },
-      response: {
-        entries: {
-          entries: {
-            allEntries: {
-              status: 200,
-              data: {
-                length: jest.fn(),
-                message: 'new',
-              },
-            },
-          },
+    };
+
+    inst.forceUpdate();
+  });
+
+  it('should click simulate submit', () => {
+    const inst = wrappedMore.instance();
+    inst.props = {
+      addEntry: jest.fn(),
+      match: {
+        params: {
+          id: 1,
         },
       },
     };
