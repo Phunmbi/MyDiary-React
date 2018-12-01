@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authentication UI render features component should render as expected 1`] = `
+<div
+  className="hero"
+>
+  <div
+    className="title"
+  >
+    <h1>
+      MyDiary
+    </h1>
+  </div>
+  <section>
+    <div
+      className="hero-marketing"
+    >
+      <p>
+        Let's help you make it easier to keep your diary. 
+      </p>
+      <p>
+        With the ability to edit and delete entries as you please.
+      </p>
+      <p>
+        All wrapped in a lightweight app built for your convenience.
+      </p>
+    </div>
+    <Connect(Signup) />
+  </section>
+</div>
+`;

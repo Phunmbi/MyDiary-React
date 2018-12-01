@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signin UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(Signin)
+          response={
+            Object {
+              "addEntry": [MockFunction],
+              "auth": Object {
+                "error": false,
+              },
+              "entries": Object {
+                "newEntryError": Object {
+                  "data": Object {
+                    "message": "new",
+                  },
+                  "length": 5,
+                },
+              },
+            }
+          }
+        >
+          <Signin
+            response={
+              Object {
+                "auth": Object {
+                  "authenticated": null,
+                  "firstName": null,
+                  "lastName": null,
+                },
+                "entries": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+                "profile": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+              }
+            }
+            signin={[Function]}
+          >
+            <div
+              className="hero"
+            >
+              <div
+                className="title"
+              >
+                <h1>
+                  MyDiary
+                </h1>
+              </div>
+              <section>
+                <div
+                  className="hero-marketing"
+                >
+                  <p>
+                    Let's help you make it easier to keep your diary. 
+                  </p>
+                  <p>
+                    With daily programmable reminders. 
+                  </p>
+                  <p>
+                    The ability to edit and delete entries as you please.
+                  </p>
+                  <p>
+                    All wrapped in a lightweight app built for your convenience.
+                  </p>
+                </div>
+                <div
+                  className="hero-account"
+                >
+                  <h3>
+                    Sign in
+                  </h3>
+                  <p
+                    className="errorResponse"
+                    id="errorResponse"
+                  />
+                  <form
+                    onSubmit={[Function]}
+                  >
+                    <input
+                      id="email"
+                      onChange={[Function]}
+                      placeholder="Email"
+                      required={true}
+                      type="email"
+                    />
+                    <span
+                      className="errorResponse"
+                    />
+                    <input
+                      id="password"
+                      min="8"
+                      onChange={[Function]}
+                      placeholder="Password"
+                      required={true}
+                      type="password"
+                    />
+                    <span
+                      className="errorResponse"
+                    />
+                    <button
+                      id="submit"
+                      type="submit"
+                    >
+                      Sign in
+                    </button>
+                  </form>
+                  <p>
+                    Don't have an account? then
+                    <Link
+                      replace={false}
+                      to="/"
+                    >
+                      <a
+                        href="/"
+                        onClick={[Function]}
+                      >
+                         Sign up
+                      </a>
+                    </Link>
+                  </p>
+                </div>
+              </section>
+            </div>
+          </Signin>
+        </Connect(Signin)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

@@ -8,7 +8,7 @@ import Home from '../assets/icons8-home-page-24.png';
 import Ellipsis from '../assets/Ellipsis.gif';
 import spinner from '../assets/Spinner-1s.gif';
 
-class Edit extends Component {
+export class Edit extends Component {
   componentDidMount() {
     const { viewEntry: viewSingleEntry, match } = this.props;
     const { id } = match.params;
@@ -37,7 +37,7 @@ class Edit extends Component {
         'Entry successfully edited',
         'success',
       );
-
+      editedEntry.status = 0;
       setTimeout(() => { history.push('/dashboard'); }, 2000);
     }
   }

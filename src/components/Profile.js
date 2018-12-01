@@ -10,7 +10,7 @@ import Home from '../assets/icons8-home-page-24.png';
 import Ellipsis from '../assets/Ellipsis.gif';
 import spinner from '../assets/Spinner-1s.gif';
 
-class Profile extends Component {
+export class Profile extends Component {
   state = {
     existingReminder: [],
     articleCount: 0,

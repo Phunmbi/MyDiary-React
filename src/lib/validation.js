@@ -5,7 +5,7 @@ const validateAuth = (fields) => {
   const emailFormat = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
   if (fields.email) {
     if (!emailFormat.test(fields.email.trim())) {
-      error.email = "You've entered an invalid email.";
+      error.email = 'You\'ve entered an invalid email';
       error.status = true;
     } else {
       error.email = '';
@@ -31,8 +31,7 @@ const validateAuth = (fields) => {
       if (fields.password !== fields.confirmPassword) {
         error.confirmPassword = 'Passwords do not match.';
         error.status = true;
-      }
-      else {
+      } else {
         error.confirmPassword = '';
         error.status = false;
       }

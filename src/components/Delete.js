@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 import { deleteEntry } from '../actions/entryActions';
 
 
-class Delete extends Component {
+export class Delete extends Component {
   handleNo = () => {
     const { history } = this.props;
     history.goBack();

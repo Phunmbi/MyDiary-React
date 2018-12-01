@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Edit from '../../assets/icons8-pencil-26.png';
 import Delete from '../../assets/icons8-trash-26.png';
 
-class Card extends Component {
+export class Card extends Component {
   displayCard = () => {
     const { entries } = this.props;
     return entries.map((entry) => {

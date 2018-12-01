@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(Add)
+          response={
+            Object {
+              "addEntry": [MockFunction],
+              "entries": Object {
+                "newEntryError": Object {
+                  "data": Object {
+                    "message": "new",
+                  },
+                  "length": 5,
+                },
+              },
+            }
+          }
+        >
+          <Add
+            addEntry={[Function]}
+            response={
+              Object {
+                "auth": Object {
+                  "authenticated": null,
+                  "firstName": null,
+                  "lastName": null,
+                },
+                "entries": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+                "profile": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+              }
+            }
+          >
+            <div
+              className="dashboard"
+            >
+              <Header>
+                <header>
+                  <Link
+                    replace={false}
+                    to="/dashboard"
+                  >
+                    <a
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      <h1>
+                        MyDiary
+                      </h1>
+                    </a>
+                  </Link>
+                  <Link
+                    replace={false}
+                    to="/profile"
+                  >
+                    <a
+                      href="/profile"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Profile"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                      />
+                    </a>
+                  </Link>
+                </header>
+              </Header>
+              <section>
+                <h3>
+                  Add a new Entry
+                </h3>
+              </section>
+              <p
+                id="errorResponse"
+              />
+              <section
+                className="add-entry"
+              >
+                <form
+                  onSubmit={[Function]}
+                >
+                  <input
+                    id="title"
+                    placeholder="Title"
+                    required={true}
+                    type="text"
+                  />
+                  <textarea
+                    cols="70"
+                    id="details"
+                    name="details"
+                    placeholder="Tell me what happened today"
+                    required={true}
+                    rows="16"
+                  />
+                  <button
+                    id="submit"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                  <Link
+                    replace={false}
+                    to="/dashboard"
+                  >
+                    <a
+                      href="/dashboard"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Home"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+                      />
+                    </a>
+                  </Link>
+                </form>
+              </section>
+            </div>
+          </Add>
+        </Connect(Add)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

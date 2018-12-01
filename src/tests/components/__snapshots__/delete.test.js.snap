@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete UI render features component should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testkey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testkey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testkey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(Delete)>
+          <Delete
+            deleteEntry={[Function]}
+            response={
+              Object {
+                "auth": Object {
+                  "authenticated": null,
+                  "firstName": null,
+                  "lastName": null,
+                },
+                "entries": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+                "profile": Object {
+                  "authenticated": "",
+                  "deletedEntry": Array [],
+                  "deletedEntryError": Array [],
+                  "deletedReminder": Array [],
+                  "deletedReminderError": Array [],
+                  "editedEntry": Array [],
+                  "editedEntryError": Array [],
+                  "entries": Array [],
+                  "entriesError": Array [],
+                  "error": Array [],
+                  "existingReminder": Array [],
+                  "existingReminderError": Array [],
+                  "firstName": "",
+                  "lastName": "",
+                  "newEntry": Array [],
+                  "newEntryError": Array [],
+                  "newReminder": Array [],
+                  "newReminderError": Array [],
+                  "singleEntry": Array [],
+                  "singleEntryError": Array [],
+                  "status": "",
+                },
+              }
+            }
+          >
+            <div
+              className="dashboard"
+            >
+              <div
+                id="deleteModal"
+              >
+                <div
+                  className="deleteModal-main"
+                >
+                  <div
+                    className="deleteModal-question"
+                  >
+                    <p
+                      id="response"
+                    />
+                    <p>
+                      Are you sure you want to delete this entry?
+                    </p>
+                  </div>
+                  <div
+                    className="deleteModal-button"
+                  >
+                    <button
+                      className="button"
+                      id="yes-button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      className="button"
+                      id="no-button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      No
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Delete>
+        </Connect(Delete)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;
